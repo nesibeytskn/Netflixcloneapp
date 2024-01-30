@@ -2,22 +2,22 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import HomeScreen from '../screens/AppScreens/HomeScreen';
+
 import GamesScreen from '../screens/AppScreens/GamesScreen';
 import NewPopularStackScreen from '../screens/StackScreens/NewPopularStackScreen';
-import DownloadsScreen from '../screens/AppScreens/DownloadsScreen';
-import DetailScreen from '../screens/AppScreens/DetailScreen';
+
 import HomeStackScreen from '../screens/StackScreens/HomeStackScreen';
 import DownloadStackScreen from '../screens/StackScreens/DownloadStackScreen';
 
+const TabStack = createBottomTabNavigator();
 const BottomTabNavigation = () => {
-  const TabStack = createBottomTabNavigator();
   return (
     <TabStack.Navigator
       tabBarOptions={{
-        tabStyle: {
-          backgroundColor: 'black',
+        style: {
+          paddingBottom: 90,
         },
+        tabStyle: {},
       }}
       screenOptions={({route}) => ({
         tabBarIcon: ({focused, color, size}) => {
